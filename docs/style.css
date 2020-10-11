@@ -1,0 +1,85 @@
+#background-map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.leaflet-control-container {
+  display: none;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: Helvetica, arial, sans-serif;
+}
+
+h1 {
+  margin: 0;
+}
+
+.tile {
+  height: 100vh;
+  display: flex;
+}
+
+@media (orientation: portrait) {
+  .tile {
+    flex-direction: column;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+  }
+}
+
+h1.tile {
+  justify-content: center;
+  align-items: center;
+  font-size: 6em;
+}
+
+.tile:nth-child(odd) {
+  background-color: black;
+  color: white;
+}
+
+.tile:nth-child(even) {
+  background-color: white;
+  color: black;
+}
+
+.tile > * {
+  flex: 1 0 0;
+  min-width: 0;
+  min-height: 0; /* portrait mode */
+}
+
+.position-relative {
+  position: relative;
+}
+
+.tile video {
+  object-fit: cover;
+}
+
+h1 {
+  align-self: center;
+}
+
+.tile.padding > div {
+  padding: 20px;
+}
+
+.tile > img {
+  display: block;
+  object-fit: contain;
+  padding: 20px;
+}
+
+.display-none {
+  display: none;
+}
