@@ -18,6 +18,7 @@ export default class GpxMap {
       zoom: 12,
       preferCanvas: true,
       scrollWheelZoom: false,
+      dragging: !leaflet.Browser.mobile,
     })
 
     const mapTiles = leaflet.tileLayer.provider('CartoDB.DarkMatterNoLabels')
